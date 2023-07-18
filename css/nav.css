@@ -1,0 +1,35 @@
+body > header
+{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background-color: rgb(221, 221, 221);
+}
+
+section:first-child
+{
+    padding-top: 60px;
+    background-color: rgb(221, 221, 221);
+}
+
+@media only screen and (max-width: 767px) 
+{
+    section:first-child
+    {
+        padding-top: 52px;
+    }
+}
+
+.scrolled-down 
+{
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up 
+{
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body
+{
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    overflow-x: hidden;  
+}
+
+#carousel .carousel-item > div, div.img-start > div
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 50px;
+    text-align: left;
+}
+
+#carousel .carousel-item img, div.img-start img
+{
+    filter: brightness(0.4);
+    height: 400px !important;
+    object-fit: cover;
+    width: 100%;
+}
+
+#carousel, div.img-start
+{
+    height: 400px !important;
+}
+
+.stats .fa-solid
+{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+#pomocni .fa-solid
+{
+    float: right;
+}
+
+section.info > .row > div > div, .contact > .row > div > div
+{
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(199, 199, 206, 1);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(199, 199, 206, 1);
+    box-shadow: 0px 0px 12px 1px rgba(199, 199, 206, 1);
+    border-radius: 12px;
+    position: relative;
+}
+
+section.info > .row > div > div a
+{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+}
+
+section.info .fa-solid, section.info .fa-brands
+{
+    padding-bottom: 25px;
+}
+
+.slider > div
+{
+    cursor: grab;
+}
+
+footer
+{
+    font-size: 15px;
+}
+
+footer ul
+{
+    display: block;
+    list-style: none;
+}
+
+footer ul a
+{
+    text-decoration: none;
+}
+
+footer .fa-brands
+{
+    font-size: 18px;
+    padding: 5px 10px 5px 0;
+}
+
+.pop-up
+{
+    display: none;
+}
+
