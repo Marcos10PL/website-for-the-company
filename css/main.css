@@ -52,6 +52,11 @@ section.info > .row > div > div, .contact > .row > div > div
     position: relative;
 }
 
+.list-group a
+{
+  font-size: initial;
+}
+
 section.info > .row > div > div a
 {
     position: absolute;
@@ -96,3 +101,10 @@ footer .fa-brands
     display: none;
 }
 
+@media (max-width: 992px)
+{
+  .map
+  {
+      height: 400px;
+  }
+}

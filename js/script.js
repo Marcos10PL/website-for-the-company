@@ -72,7 +72,7 @@ $(document).ready(function()
         {
             const elementTop = animated[i].getBoundingClientRect().top;
         
-            if (elementTop < windowHeight - 150) 
+            if (elementTop < windowHeight - 120) 
             animated[i].classList.add("active");
         }
     }

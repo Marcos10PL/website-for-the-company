@@ -4,7 +4,7 @@ body > header
     top: 0;
     left: 0;
     right: 0;
-    z-index: 200;
+    z-index: 100;
     background-color: rgb(221, 221, 221);
 }
 
@@ -14,7 +14,7 @@ section:first-child
     background-color: rgb(221, 221, 221);
 }
 
-@media only screen and (max-width: 767px) 
+@media (max-width: 767px) 
 {
     section:first-child
     {
