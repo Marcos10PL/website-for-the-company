@@ -10,6 +10,4 @@ The website uses: <br>
 
 ## tech
 
--- Bootstrap v5.3 <br>
--- JavaScript + jQuery <br>
--- HTML, CSS <br>
+-- Bootstrap v5.3
