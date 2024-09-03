@@ -1,6 +1,7 @@
 # website-for-the-company
 
-Fully responsive and complete website template for a sample company. The website uses Bootstrap and some CSS animations.
+Fully responsive and complete website template for a sample company. <br />
+The website uses Bootstrap and some CSS animations.
 
 ## slider and api for cookies
 
