@@ -1,20 +1,20 @@
 body > header
 {
-    position: fixed !important;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: rgb(221, 221, 221);
+    background-color: #eee;
 }
 
 section:first-child
 {
-    padding-top: 60px;
-    background-color: rgb(221, 221, 221);
+    padding-top: 3.75rem;
+    background-color: #eee;
 }
 
-@media (max-width: 767px) 
+@media (max-width: 48rem) 
 {
     section:first-child
     {

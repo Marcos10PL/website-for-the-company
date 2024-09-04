@@ -1,27 +1,28 @@
 $(document).ready(function()
 {
     const windowHeight = $(window).height();
-    const sectionFirstHeight = $('section:nth-child(2)').height()
+    const sectionFirstHeight = $('section:nth-child(2)').height();
+
     let scroll = window.scrollY;
     let start = false;
 
     // counter
-    if(sectionFirstHeight < windowHeight)
-    {
-        $('.counter').each(function() {counter(this, 0); });
-        animate();
-        start = true;
-    }
-    
     function counter(el, numbers)
     {
         const count = setInterval(() =>
         {
             $(el).html(numbers++);
-            if(numbers == $(el).data('max')) clearInterval(count);
+            if(numbers === $(el).data('max')) clearInterval(count);
         }, 6)
     }
 
+    if(sectionFirstHeight < windowHeight)
+    {
+        start = true;
+        $('.counter').each(function() {counter(this, 0); });
+        animate();
+    }
+    
     // slider
     if($('.slider').length)
     {
@@ -45,15 +46,17 @@ $(document).ready(function()
             }]
         });
     
-        $('.slider > div').on('mousedown', function(){ $(this).css('cursor', 'grabbing');});
-        $('.slider > div').on('mouseup', function(){ $(this).css('cursor', 'grab');});
+        $('.slider > div')
+          .on('mousedown', function(){ $(this).css('cursor', 'grabbing'); });
+        $('.slider > div')
+          .on('mouseup', function(){ $(this).css('cursor', 'grab'); });
     }
 
     // pop-up -> cookie
     $(window).on('load', function()
     {
-        if(Cookies.get('cookie') == null)
-        $('.pop-up').slideDown();
+        if(Cookies.get('cookie') === null)
+          $('.pop-up').slideDown();
     });
 
     $('.pop-up button.accept').click(function()
@@ -62,31 +65,28 @@ $(document).ready(function()
         Cookies.set('cookie', true, { expires: 7 }, { path: '' });
     });
 
-
     //animation
     function animate() 
     {
-        const animated = $('.animated');
-      
-        for (i = 0; i < animated.length; i++) 
-        {
-            const elementTop = animated[i].getBoundingClientRect().top;
-        
-            if (elementTop < windowHeight - 120) 
-            animated[i].classList.add("active");
-        }
+      $('.animated').each(function() 
+      {
+          const elementTop = $(this)[0].getBoundingClientRect().top;
+          if (elementTop < windowHeight - 120)
+              $(this).addClass("active");
+      });
     }
 
-    if(scroll > 0) animate();
+    if(scroll > 0) 
+      animate();
 
     // scroll
-    $(window).scroll(function() 
+    $(window).scroll(() => 
     {
         animate();
 
-        if(start == false)
+        if(!start)
         {
-            $('.counter').each(function(){ counter(this, 0);});
+            $('.counter').each(function() { counter(this, 0); });
             start = true;
         }
 
@@ -94,13 +94,15 @@ $(document).ready(function()
         {
             if(scroll < window.scrollY)
             {
-                $('body > header').removeClass('scrolled-up');
-                $('body > header').addClass('scrolled-down');
+                $('body > header')
+                  .removeClass('scrolled-up')
+                  .addClass('scrolled-down');
             }
             else
             {
-                $('body > header').removeClass('scrolled-down');
-                $('body > header').addClass('scrolled-up');
+                $('body > header')
+                  .removeClass('scrolled-down')
+                  .addClass('scrolled-up');
             }
         }
         scroll = window.scrollY;
